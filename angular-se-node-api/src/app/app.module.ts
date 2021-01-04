@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { NodeApiComponent } from './node-api/node-api.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NodeApiComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
+  ],
+  declarations: [
+    AppComponent,
+    NodeApiComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
