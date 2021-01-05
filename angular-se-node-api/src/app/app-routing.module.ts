@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NodeApiComponent } from './node-api/node-api.component';
 
+import { NodeApiComponent } from './node-api/node-api.component';
 
 const routes: Routes = [
   { path: 'node', component: NodeApiComponent },
