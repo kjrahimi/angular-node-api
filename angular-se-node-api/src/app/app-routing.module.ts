@@ -5,7 +5,7 @@ import { NodeApiComponent } from './node-api/node-api.component';
 
 const routes: Routes = [
   { path: 'userguide', component: HelperComponent },
-  { path: 'node', component: NodeApiComponent },
+  { path: 'nodeapi', component: NodeApiComponent },
   { path: '**', redirectTo: '/' }
 ];
 
