@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NodeApiComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClientModule) {
+    
+  }
 
   ngOnInit(): void {
   }
