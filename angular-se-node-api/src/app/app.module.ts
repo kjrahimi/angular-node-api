@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { NodeApiComponent } from './node-api/node-api.component';
+import { HelperComponent } from './helper/helper.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { NodeApiComponent } from './node-api/node-api.component';
   declarations: [
     AppComponent,
     NodeApiComponent,
+    HelperComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
