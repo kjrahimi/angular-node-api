@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NodeApiComponent implements OnInit {
 
   constructor(private http: HttpClientModule) {
-    
+
   }
 
   ngOnInit(): void {

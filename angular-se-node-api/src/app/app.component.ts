@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-se-node-api';
+  links = [
+    {path: '/userguide', icon: 'save', title: 'UserGuide'},
+    {path: '/nodeapi', icon: 'delete', title: 'NodeAPI'}
+  ];
+  styleMarginLeft = '16px';
+  styleMarginTop = '50px';
 }
