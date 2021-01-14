@@ -15,12 +15,12 @@ import { HelperComponent } from './helper/helper.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule,
+    MaterialModule
   ],
   declarations: [
     AppComponent,
     NodeApiComponent,
-    HelperComponent,
+    HelperComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
