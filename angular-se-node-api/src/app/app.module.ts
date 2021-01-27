@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { NodeApiComponent } from './node-api/node-api.component';
 import { HelperComponent } from './helper/helper.component';
+import { NodeApiService } from './shared/services/node-api.service';
 
 @NgModule({
   imports: [
@@ -22,7 +23,9 @@ import { HelperComponent } from './helper/helper.component';
     NodeApiComponent,
     HelperComponent
   ],
-  providers: [],
+  providers: [
+    NodeApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
