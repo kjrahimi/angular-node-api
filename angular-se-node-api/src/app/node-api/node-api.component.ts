@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+//import activate route
 @Component({
   selector: 'app-node-api',
   templateUrl: './node-api.component.html',
@@ -8,25 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NodeApiComponent implements OnInit {
-  model = 'https://local.sportsengine.com/node/api/v1?id='
-  node = ''
-  example = '11513'
+  private base_url = 'https://local.sportsengine.com/node/api/v1?id=';
+  private node = '11991';
+  r_data = null;
 
   //need to subscribe to the observable
   constructor(private http: HttpClient) {}
 
-  getNode(nodeId){
-    //returning an Observable using HttpClient
-    //console.log('incoming nodeId '+ nodeId);
-    //console.log('model '+ this.model);
-    return this.http.get(this.model+nodeId);
+  all(){
+    return this.http.get(`${this.base_url}${this.node}`);
   }
+  //
 
   ngOnInit() {
-    this.getNode(this.example).subscribe(function(data){
-      this.node = data;
-    });
-    //this.getNode(this.example);
+    this.all().subscribe(r_data => this.r_data = r_data);
+    console.log(this.r_data);
   }
   
 }
