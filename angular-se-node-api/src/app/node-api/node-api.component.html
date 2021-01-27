@@ -1,5 +1,8 @@
   <h4>node-api works!</h4>
   <mat-card>
+    <app-node-api-list [list]="nodeapilist"></app-node-api-list>
+  </mat-card>
+  <mat-card>
     <p>{{data.response.node.id}}</p>
     <pre>{{data|json}}</pre>
   </mat-card>

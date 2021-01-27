@@ -9,6 +9,7 @@ import { MaterialModule } from './material.module';
 import { NodeApiComponent } from './node-api/node-api.component';
 import { HelperComponent } from './helper/helper.component';
 import { NodeApiService } from './shared/services/node-api.service';
+import { NodeApiListComponent } from './node-api/node-api-list/node-api-list.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { NodeApiService } from './shared/services/node-api.service';
   declarations: [
     AppComponent,
     NodeApiComponent,
-    HelperComponent
+    HelperComponent,
+    NodeApiListComponent
   ],
   providers: [
     NodeApiService

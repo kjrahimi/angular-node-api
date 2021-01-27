@@ -8,6 +8,23 @@ import { NodeApiService } from '../shared/services/node-api.service';
 })
 
 export class NodeApiComponent implements OnInit {
+   nodeapilist = [
+    {
+      id: 1,
+      title: 'Angular 9 Fundamentals!',
+      description: 'Learn the fundamentals of Angular 9',
+      percentComplete: 26,
+      favorite: true
+    },
+    {
+      id: 2,
+      title: 'Angular 9 Fundamentals 2',
+      description: 'Learn the fundamentals of Angular 9 2',
+      percentComplete: 21,
+      favorite: false
+    }
+  ];
+
   public data = null;
 
   constructor(private nodeApiService: NodeApiService) {}
