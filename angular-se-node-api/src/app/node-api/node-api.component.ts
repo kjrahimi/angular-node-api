@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NodeApiService } from '../shared/services/node-api.service';
-//import activate route
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-node-api',
   templateUrl: './node-api.component.html',
@@ -26,10 +27,12 @@ export class NodeApiComponent implements OnInit {
   ];
 
   public data = null;
+  public id = null;
 
-  constructor(private nodeApiService: NodeApiService) {}
+  constructor(private nodeApiService: NodeApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.nodeApiService.all().subscribe(r_data => this.data = r_data);
+    this.route.params.pipe(map(value => value.id.substring(1))).subscribe(id => this.id = id);
+    this.nodeApiService.getNode(this.id).subscribe(r_data => this.data = r_data);
   }
 }

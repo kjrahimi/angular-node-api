@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'nodeapi/:id', component: NodeApiComponent },
   { path: '**', redirectTo: '/' }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
