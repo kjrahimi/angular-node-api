@@ -28,11 +28,29 @@ export class NodeApiComponent implements OnInit {
 
   public data = null;
   public id = null;
+  public name = null;
 
   constructor(private nodeApiService: NodeApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.params.pipe(map(value => value.id.substring(1))).subscribe(id => this.id = id);
+    // this.route.queryParams.subscribe(params => {
+    //   this.name = params['name'];
+    // });
+    // console.log(this.name);
+     // this.route.queryParams.subscribe( params => {this.name = params['name'];} );
+
+    //  this.route.queryParams.subscribe(params => {
+    //   this.nodeApiService.getNode(this.id).subscribe(function(id){this.data = id;});
+    // });
+
+    // this.route.params.pipe(map(value => value.id)).subscribe(id => {
+    //   this.nodeApiService.getNode(id).subscribe(function(id) {
+    //     this.data = id;
+    //   });
+    // });
+    //this.route.queryParams.subscribe(params => {this.name = params['name'];});
+    //this.route.params.pipe(map(value => value.id)).subscribe(id => this.id = id);
+    this.id = this.route.snapshot.paramMap.get('id')
     this.nodeApiService.getNode(this.id).subscribe(r_data => this.data = r_data);
   }
 }
