@@ -1,14 +1,21 @@
-<p>node-api-list works!</p>
+<!-- <p>node-api-list works!</p> -->
 <mat-card>
   <mat-card-header>
     <mat-card-title>Select Course</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
+  <!-- <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let item of list">
         <h4 matLine>{{item.title}}</h4>
         <p matLine>{{item.description}}</p>
       </mat-list-item>
+    </mat-list>
+  </mat-card-content> -->
+  <mat-card-content>
+    <mat-list>
+      <h4 matLine>{{data.response.node.id}}</h4>
+      <p matline>{{data.response.node.fields.uuid}}</p>
+      <p>Child component accepting node API endpoint and extracting the node ID</p>
     </mat-list>
   </mat-card-content>
 </mat-card>

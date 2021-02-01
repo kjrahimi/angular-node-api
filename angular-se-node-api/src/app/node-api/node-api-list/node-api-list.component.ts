@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./node-api-list.component.scss']
 })
 export class NodeApiListComponent implements OnInit {
-  @Input() list;
+  //@Input() list;
+  @Input() data;
 
   constructor() { }
 
